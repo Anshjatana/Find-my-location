@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
 
-
-const LocationDisplay = ({ locationInfo, handleClear, place ,state,country}) => {
+const LocationDisplay = ({
+  locationInfo,
+  handleClear,
+  place,
+  state,
+  country,
+}) => {
   return (
     <div>
       {locationInfo ? (
@@ -9,14 +14,13 @@ const LocationDisplay = ({ locationInfo, handleClear, place ,state,country}) => 
           <p>Place: {place}</p>
           <p>State: {state}</p>
           <p>Country: {country}</p>
-          <button onClick={handleClear}>Clear Information</button>
+          <button onClick={handleClear}>Clear</button>
         </div>
       ) : (
-        <p>No location data available</p>
+        <p>Enter Details above</p>
       )}
     </div>
   );
 };
 
 export default LocationDisplay;
-

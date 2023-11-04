@@ -1,6 +1,15 @@
-import React from 'react'
+import React from "react";
+import { ThreeDots } from "react-loader-spinner";
 
-const PostalCodeInput = ({fetchLocationInfo,loading,error,countryCode,setCountryCode,postalCode,setPostalCode}) => {
+const PostalCodeInput = ({
+  fetchLocationInfo,
+  loading,
+  error,
+  countryCode,
+  setCountryCode,
+  postalCode,
+  setPostalCode,
+}) => {
   return (
     <div className="App">
       <h1>Postal Code Location Finder</h1>
@@ -8,7 +17,7 @@ const PostalCodeInput = ({fetchLocationInfo,loading,error,countryCode,setCountry
         type="text"
         value={countryCode}
         onChange={(e) => setCountryCode(e.target.value)}
-        placeholder="Enter Country Code"
+        placeholder="Enter Country Code "
         required
       />
       <input
@@ -20,13 +29,22 @@ const PostalCodeInput = ({fetchLocationInfo,loading,error,countryCode,setCountry
       />
       <button onClick={fetchLocationInfo}>Search</button>
 
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <ThreeDots
+          height="80"
+          width="80"
+          radius="9"
+          color="black"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+      )}
 
       {error && <p className="error">{error}</p>}
-
     </div>
   );
 };
 
- 
 export default PostalCodeInput;
