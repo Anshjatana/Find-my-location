@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import LocationDisplay from "./Components/LocationDisplay";
 import PostalCodeInput from "./Components/PostalCodeInput";
+import "./App.css"
+import imgsrc from "./Location.png"
+
 
 const App = () => {
   const [postalCode, setPostalCode] = useState("");
@@ -45,7 +48,11 @@ const App = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center">Pincoder</h1>
+      <h1 className="text-4xl font-bold  text-center mt-4 uppercase text-pink-900">Find My Location</h1>
+    <div className="flex justify-evenly items-center mt-16">
+     <img src={imgsrc} alt="LocationImage" width={300} className=""/>
+     <div className=" bg-[#fddcd2] w-[40%] h-auto p-10 pt-4 rounded-lg  text-center  ">
+     <h2 className="text-xl text-pink-900 uppercase font-bold mb-6 underline" >Enter details below</h2>
       <PostalCodeInput
         fetchLocationInfo={fetchLocationInfo}
         postalCode={postalCode}
@@ -60,6 +67,8 @@ const App = () => {
         locationInfo={locationInfo}
         {...locationInfo}
       />
+      </div>
+    </div>
     </>
   );
 };
