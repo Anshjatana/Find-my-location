@@ -3,7 +3,7 @@ import { useState } from "react";
 import LocationDisplay from "./Components/LocationDisplay";
 import PostalCodeInput from "./Components/PostalCodeInput";
 import "./App.css"
-import imgsrc from "./Location.png"
+import imgsrc from "./Location.avif"
 
 
 const App = () => {
