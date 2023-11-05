@@ -2,5 +2,66 @@
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system;
-  
+}
+
+/* Media queries */
+
+
+@media (max-width:1056px) {
+  .inputContainer{
+    width: 50%;
+  }
+  .inputContainer input:first-child{
+    width: 50%;
+  }
+  .inputContainer input{
+    width: 65%;
+  }
+}
+@media (max-width:904px) {
+ .appContainer{
+  flex-direction: column;
+  margin-top: 2rem;
+ }
+ .appContainer img{
+  width: 20%;
+ }
+ .inputContainer{
+  margin-bottom: 2rem;
+  width: 60%;
+ }
+.inputContainer input:first-child{
+  width: 60%;
+}
+.inputContainer input{
+  width: 70%;
+}
+.heading{
+  font-size: 2rem;
+}
+}
+@media (max-width:656px) {
+  .inputContainer input:first-child{
+    font-size: 15px;
+  }
+  .inputContainer input{
+    font-size: 15px;
+  }
+  .search-btn{
+    font-size: 15px;
+  }
+  .location-info p{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width:508px) {
+  .heading {
+    font-size: 1.7rem;
+}
+.inputContainer {
+  width: 75%;
+}
+.location-info p{
+  font-size: 1.1rem;
+}
 }

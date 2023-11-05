@@ -80,7 +80,7 @@ const PostalCodeInput = () => {
       />
       <button
         onClick={handleSearch}
-        className=" hover:bg-pink-950 bg-pink-800 text-white px-3 py-2 rounded-md text-lg mt-3"
+        className=" hover:bg-pink-950 bg-pink-800 text-white px-3 py-2 rounded-md text-lg mt-3 search-btn"
       >
         Search
       </button>
