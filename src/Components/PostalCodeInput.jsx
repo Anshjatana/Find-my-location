@@ -62,14 +62,15 @@ const PostalCodeInput = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <input
-        type="text"
+      <select
         className=" p-2 my-1 text-base text-center rounded-lg w-[45%]"
         value={countryCode}
         onChange={handleCountryCodeChange}
         placeholder="Enter Country Code (IN)"
         required
-      />
+      >
+        <option>India</option>
+      </select>
       <input
         type="text"
         className=" p-2 my-2 text-lg  text-center rounded-lg w-[60%]"

@@ -11,7 +11,7 @@
   .inputContainer{
     width: 50%;
   }
-  .inputContainer input:first-child{
+  .inputContainer select{
     width: 50%;
   }
   .inputContainer input{
@@ -30,7 +30,7 @@
   margin-bottom: 2rem;
   width: 60%;
  }
-.inputContainer input:first-child{
+.inputContainer select{
   width: 60%;
 }
 .inputContainer input{
@@ -41,7 +41,7 @@
 }
 }
 @media (max-width:656px) {
-  .inputContainer input:first-child{
+  .inputContainer select{
     font-size: 15px;
   }
   .inputContainer input{
