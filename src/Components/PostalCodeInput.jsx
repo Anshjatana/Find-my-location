@@ -4,7 +4,6 @@ import { ThreeDots } from "react-loader-spinner";
 import "../App.css";
 import {
   selectLocation,
-  setCountryCode,
   setPostalCode,
   setError,
   setLoading,
@@ -13,12 +12,10 @@ import {
 
 const PostalCodeInput = () => {
   const dispatch = useDispatch();
-  const { loading, error, countryCode, postalCode } =
+  const { loading, error, postalCode } =
     useSelector(selectLocation);
 
-  const handleCountryCodeChange = (e) => {
-    dispatch(setCountryCode(e.target.value));
-  };
+
 
   const handlePostalCodeChange = (e) => {
     dispatch(setPostalCode(e.target.value));
@@ -27,11 +24,11 @@ const PostalCodeInput = () => {
   const fetchLocationInfo = () => async (dispatch, getState) => {
     dispatch(setLoading(true));
 
-    const { countryCode, postalCode } = getState().location;
+    const { postalCode } = getState().location;
 
     try {
       const response = await fetch(
-        `https://api.zippopotam.us/${countryCode}/${postalCode}`
+        `https://api.zippopotam.us/in/${postalCode}`
       );
 
       if (response.ok) {
@@ -62,15 +59,6 @@ const PostalCodeInput = () => {
   };
   return (
     <div className="flex flex-col items-center justify-center">
-      <select
-        className=" p-2 my-1 text-base text-center rounded-lg w-[45%]"
-        value={countryCode}
-        onChange={handleCountryCodeChange}
-        placeholder="Enter Country Code (IN)"
-        required
-      >
-        <option>India</option>
-      </select>
       <input
         type="text"
         className=" p-2 my-2 text-lg  text-center rounded-lg w-[60%]"

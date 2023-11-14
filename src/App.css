@@ -11,9 +11,7 @@
   .inputContainer{
     width: 50%;
   }
-  .inputContainer select{
-    width: 50%;
-  }
+  
   .inputContainer input{
     width: 65%;
   }
@@ -30,9 +28,7 @@
   margin-bottom: 2rem;
   width: 60%;
  }
-.inputContainer select{
-  width: 60%;
-}
+
 .inputContainer input{
   width: 70%;
 }
@@ -41,9 +37,7 @@
 }
 }
 @media (max-width:656px) {
-  .inputContainer select{
-    font-size: 15px;
-  }
+  
   .inputContainer input{
     font-size: 15px;
   }

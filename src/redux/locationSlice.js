@@ -4,7 +4,6 @@ export const locationSlice = createSlice({
   name: "location",
   initialState: {
     postalCode: "",
-    countryCode: "",
     locationInfo: null,
     loading: false,
     error: null,
@@ -12,9 +11,6 @@ export const locationSlice = createSlice({
   reducers: {
     setPostalCode: (state, action) => {
       state.postalCode = action.payload;
-    },
-    setCountryCode: (state, action) => {
-      state.countryCode = action.payload;
     },
     setLocationInfo: (state, action) => {
       state.locationInfo = action.payload;
@@ -30,7 +26,6 @@ export const locationSlice = createSlice({
 
 export const {
   setPostalCode,
-  setCountryCode,
   setLocationInfo,
   setLoading,
   setError,
